@@ -1,19 +1,24 @@
-document.querySelector('.login-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const id = this.identifiant.value;
-    const mdp = this.mdp.value;
-    fetch('login.php', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: `identifiant=${encodeURIComponent(id)}&mdp=${encodeURIComponent(mdp)}`
-    })
-    .then(res => res.json())
-    .then(data => {
-        if(data.success) {
-            alert('Connexion réussie !');
-            // Redirection ou affichage de l'espace personnel
-        } else {
-            alert(data.message || 'Erreur de connexion.');
-        }
-    });
+// Remplace l'URL par celle de ton backend Render ou Railway
+const API_URL = 'https://ton-backend.onrender.com/api/login'; // à personnaliser après déploiement
+
+document.querySelector('.login-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const identifiant = this.identifiant.value;
+  const mdp = this.mdp.value;
+  const res = await fetch(API_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    credentials: 'include',
+    body: JSON.stringify({ identifiant, mdp })
+  });
+  const data = await res.json();
+  if (data.success) {
+    if (data.role === 'admin') {
+      window.location.href = '/personnel/admin.html';
+    } else {
+      window.location.href = '/personnel/user.html';
+    }
+  } else {
+    alert(data.error || 'Erreur de connexion');
+  }
 });

@@ -31,22 +31,7 @@
             <a href="../index.html" class="back-btn">Retour au portail</a>
         </footer>
     </div>
-    <!-- Netlify Identity Widget -->
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script src="login.js"></script>
     <script src="../main.js"></script>
-    <script>
-    // Initialisation du widget Netlify Identity
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on('init', user => {
-        if (!user) {
-          window.netlifyIdentity.on('login', () => {
-            document.location.href = '/personnel/index.html';
-          });
-        }
-      });
-      window.netlifyIdentity.init();
-    }
-    </script>
 </body>
 </html>
