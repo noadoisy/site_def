@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil | noado</title>
+    <!-- Google Fonts & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="loader"><i class="fas fa-spinner"></i></div>
+    <div class="main-content">
+        <header class="header">
+            <div class="header-top">
+                <h1>Bienvenue sur le portail de Noa DOISY</h1>
+                <button id="theme-toggle" aria-label="Changer le thème"><i class="fas fa-moon"></i></button>
+            </div>
+            <p class="subtitle">Développeur web, créatif et passionné. Explorez mon univers professionnel et personnel.</p>
+        </header>
+        <section class="cards">
+            <a class="card" href="portfolio/index.html">
+                <i class="fas fa-briefcase"></i>
+                <h2>Portfolio</h2>
+                <p>Découvrez mes réalisations et projets professionnels.</p>
+            </a>
+            <a class="card" href="personnel/index.html">
+                <i class="fas fa-user-lock"></i>
+                <h2>Espace Personnel</h2>
+                <p>Accès sécurisé par identifiant et mot de passe.</p>
+            </a>
+            <a class="card" href="projets/index.html">
+                <i class="fas fa-code"></i>
+                <h2>Projets Perso</h2>
+                <p>Accédez à mes projets personnels.</p>
+            </a>
+            <a class="card" href="cours/index.html">
+                <i class="fas fa-book"></i>
+                <h2>Cours</h2>
+                <p>Ressources et supports de cours.</p>
+            </a>
+        </section>
+        <section class="socials">
+            <a href="https://github.com/" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://instagram.com/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </section>
+        <section class="form-contact">
+            <h2>Contactez-moi</h2>
+            <input type="text" name="nom" placeholder="Votre nom" required>
+            <input type="email" name="email" placeholder="Votre email" required>
+            <textarea name="message" rows="4" placeholder="Votre message" required></textarea>
+            <button type="submit">Envoyer</button>
+        </section>
+        <footer>
+            <hr style="border: none; border-top: 1px solid #333; margin: 2rem 0;">
+            <span>noa.doisy30@gmail.com &copy; 2025</span>
+        </footer>
+    </div>
+    <script src="main.js"></script>
+    
+</body>
+</html>
