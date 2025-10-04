@@ -17,8 +17,8 @@ const pool = new Pool({
 
 // Autorise le domaine Netlify en production, et localhost en dev
 const allowedOrigins = [
-  'http://127.0.0.1:5500', // dev local
-  'https://noadoisy.fr' // à remplacer par ton vrai domaine Netlify
+  'http://127.0.0.1:5500', 
+  'https://noadoisy.fr' 
 ];
 app.use(cors({
   origin: function(origin, callback) {

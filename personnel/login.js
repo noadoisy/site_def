@@ -1,5 +1,5 @@
 // Remplace l'URL par celle de ton backend Render ou Railway
-const API_URL = 'https://ton-backend.onrender.com/api/login'; // à personnaliser après déploiement
+const API_URL = 'https://api-noadoisy.onrender.com/api/login'; 
 
 document.querySelector('.login-form').addEventListener('submit', async function(e) {
   e.preventDefault();
